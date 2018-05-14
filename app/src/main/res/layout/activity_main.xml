@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:weightSum="1"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <Button
+        android:id="@+id/button_toast"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:onClick="showToast"
+        android:text="@string/button_label_toast"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="7dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/button_Poke"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:background="@color/colorPokeButton"
+        android:onClick="showPoke"
+        android:text="Poke"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_countUp" />
+
+    <TextView
+        android:id="@+id/show_count"
+        android:layout_width="115dp"
+        android:layout_height="235dp"
+        android:background="#FFFF00"
+        android:gravity="center"
+        android:text="@string/count_initial_value"
+        android:textColor="@color/colorPrimary"
+        android:textSize="200sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="103dp"
+        tools:layout_editor_absoluteY="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/button_countUp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.152" />
+
+    <Button
+        android:id="@+id/button_countUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCountUp"
+        android:onClick="countUp"
+        android:text="@string/button_label_countUp"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_toast" />
+
+</android.support.constraint.ConstraintLayout>
